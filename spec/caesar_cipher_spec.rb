@@ -16,4 +16,8 @@ describe "#caesar_cipher" do
   it "works with different shift factors" do
     expect(caesar_cipher('hello', -2)).to eql('fcjjm')
   end
+
+  it "only string input is allowed" do
+    expect(caesar_cipher(1234, -3)).to eql('error! not a string...')
+  end
 end

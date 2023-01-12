@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 require 'pry-byebug'
 
 def caesar_cipher(string, shift_factor)
-  
   # catch non-string input
-  begin 
+  begin
     # split string into chars
     split_string = string.split('')
   rescue NoMethodError
@@ -23,15 +24,15 @@ def caesar_cipher(string, shift_factor)
 
   # add shift factor to each number
   num_array.each do |e|
-      if e == (" ".ord)
-        shifted_nums.push(e)
-        next
-      end
+    if e == (' '.ord)
+      shifted_nums.push(e)
+      next
+    end
 
     shifted_nums.push(e + shift_factor)
   end
 
-  #convert shifted nums to chars
+  # convert shifted nums to chars
   unjoint_cipher = []
 
   shifted_nums.each do |e|
@@ -39,12 +40,8 @@ def caesar_cipher(string, shift_factor)
   end
 
   # join String
-  joint_cipher = unjoint_cipher.join("")
+  unjoint_cipher.join('')
 
-  # return string
-  final_cipher = joint_cipher
-
-  final_cipher
 end
 
-puts caesar_cipher("Hello", -3)
+puts caesar_cipher('Hello', -3)

@@ -41,4 +41,4 @@ def caesar_cipher(string, shift_factor)
   final_cipher
 end
 
-puts caesar_cipher("Hello there", -3)
+puts caesar_cipher("Hello", -3)

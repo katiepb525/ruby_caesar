@@ -13,4 +13,7 @@ describe "#caesar_cipher" do
     expect(caesar_cipher('Hello', -3)).to eql('Ebiil')
   end
 
+  it "works with different shift factors" do
+    expect(caesar_cipher('hello', -2)).to eql('fcjjm')
+  end
 end

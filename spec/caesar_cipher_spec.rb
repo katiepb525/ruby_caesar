@@ -19,5 +19,6 @@ describe "#caesar_cipher" do
 
   it "only string input is allowed" do
     expect(caesar_cipher(1234, -3)).to eql('error! not a string...')
+    expect(caesar_cipher([2,4,7], -3)).to eql('error! not a string...')
   end
 end

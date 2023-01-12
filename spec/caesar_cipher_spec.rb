@@ -8,4 +8,9 @@ describe "#caesar_cipher" do
   it "returns a ciphered sentence" do 
     expect(caesar_cipher('hello there', -3)).to eql('ebiil qebob')
   end
+
+  it "returns cipher with captial letters" do
+    expect(caesar_cipher('Hello', -3)).to eql('Ebiil')
+  end
+
 end

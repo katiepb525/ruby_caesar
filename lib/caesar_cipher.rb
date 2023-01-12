@@ -1,8 +1,14 @@
 require 'pry-byebug'
 
 def caesar_cipher(string, shift_factor)
-  # split string into chars
-  split_string = string.split('')
+  
+  # catch non-string input
+  begin 
+    # split string into chars
+    split_string = string.split('')
+  rescue NoMethodError
+    return 'error! not a string...'
+  end
 
   # store num ver of splitstring
   num_array = []
